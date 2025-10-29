@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './App.css';
-
-// Import your components here
-// import Button from './components/Button';
-// import Navbar from './components/Navbar';
-// import Footer from './components/Footer';
-// import TaskManager from './components/TaskManager';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import TasksPage from './pages/TasksPage';
+import PostsPage from './pages/PostsPage';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,7 +25,7 @@ function App() {
             <p className="text-lg mb-4">
               Edit <code className="font-mono bg-gray-200 dark:bg-gray-700 p-1 rounded">src/App.jsx</code> and save to test HMR
             </p>
-            
+
             <div className="flex items-center gap-4 my-4">
               <button
                 onClick={() => setCount((count) => count - 1)}
@@ -47,7 +47,7 @@ function App() {
             </p>
           </div>
         </div>
-        
+
         {/* API data display will go here */}
         <div className="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg p-6">
           <h2 className="text-2xl font-bold mb-4">API Data</h2>
@@ -69,4 +69,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;
